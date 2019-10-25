@@ -111,9 +111,6 @@
             }
         } else {
             
-            
-            
-            
             // 文件路径URL
             NSURL *pathURL = [NSURL fileURLWithPath:path];
             // 初始化媒体文件
