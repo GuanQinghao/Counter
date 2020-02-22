@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -706,8 +706,8 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                    <view key="view" wantsLayer="YES" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="201"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vQ2-tS-SfU">
@@ -742,7 +742,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="88t-UP-6BG">
-                                <rect key="frame" x="44" y="48" width="312" height="56"/>
+                                <rect key="frame" x="14" y="48" width="372" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="poi-CJ-XxH"/>
                                 </constraints>
@@ -766,8 +766,8 @@
                             <constraint firstItem="88t-UP-6BG" firstAttribute="top" secondItem="vQ2-tS-SfU" secondAttribute="bottom" constant="20" id="Kyj-84-5jA"/>
                             <constraint firstAttribute="trailing" secondItem="Ndl-Xd-2Pr" secondAttribute="trailing" constant="20" id="POP-oW-7zK"/>
                             <constraint firstItem="Ndl-Xd-2Pr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Xex-Rr-mmS"/>
-                            <constraint firstItem="88t-UP-6BG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="ZVE-Rs-geO"/>
-                            <constraint firstAttribute="trailing" secondItem="88t-UP-6BG" secondAttribute="trailing" constant="50" id="epk-U0-NYs"/>
+                            <constraint firstItem="88t-UP-6BG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ZVE-Rs-geO"/>
+                            <constraint firstAttribute="trailing" secondItem="88t-UP-6BG" secondAttribute="trailing" constant="20" id="epk-U0-NYs"/>
                             <constraint firstAttribute="trailing" secondItem="omF-pJ-5a3" secondAttribute="trailing" constant="20" id="uaw-s0-XgN"/>
                         </constraints>
                     </view>

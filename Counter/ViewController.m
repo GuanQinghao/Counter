@@ -12,34 +12,17 @@
 
 @interface ViewController ()
 
-/**
- 媒体文件总时长标签
- */
+///媒体文件总时长标签
 @property (weak) IBOutlet NSTextField *totalTimeLabel;
-
-/**
- 媒体文件总时长(单位:秒)
- */
+/// 媒体文件总时长(单位:秒)
 @property (nonatomic, assign) CGFloat totalTime;
-
-/**
- 媒体文件总个数标签
- */
+/// 媒体文件总个数标签
 @property (weak) IBOutlet NSTextField *fileCountLabel;
-
-/**
- 媒体文件总个数
- */
+/// 媒体文件总个数
 @property (nonatomic, assign) NSUInteger fileCount;
-
-/**
- 目录标签
- */
+/// 目录标签
 @property (weak) IBOutlet NSTextField *directoryLabel;
-
-/**
- 选择按钮
- */
+// 选择按钮
 @property (weak) IBOutlet NSButton *chooseButton;
 
 @end
@@ -77,11 +60,8 @@
     [self.chooseButton setTitle:@"Choose"];
 }
 
-/**
- 遍历所有文件并计算媒体文件的总个数和总时长
- 
- @param path 路径
- */
+/// 遍历所有文件并计算媒体文件的总个数和总时长
+/// @param path 路径
 - (void)traverse:(NSString *)path {
     
     // 文件管理器
@@ -135,11 +115,8 @@
     }
 }
 
-/**
- 选择目录
- 
- @param sender 选择按钮
- */
+/// 选择目录
+/// @param sender 选择按钮
 - (IBAction)chooseDirectory:(NSButton *)sender {
     
     // 按钮禁用
@@ -190,12 +167,8 @@
 
 #pragma mark - PrivateMethod
 
-/**
- 秒数格式化为时分秒
- 
- @param duration 秒数
- @return 时分秒字符串
- */
+/// 秒数格式化为时分秒
+/// @param duration 秒数
 - (NSString *)convert:(CGFloat)duration {
     
     if (duration < 0.0f) {
