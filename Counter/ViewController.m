@@ -12,18 +12,19 @@
 
 @interface ViewController ()
 
-///媒体文件总时长标签
+/// 媒体文件总时长标签
 @property (weak) IBOutlet NSTextField *totalTimeLabel;
-/// 媒体文件总时长(单位:秒)
-@property (nonatomic, assign) CGFloat totalTime;
 /// 媒体文件总个数标签
 @property (weak) IBOutlet NSTextField *fileCountLabel;
-/// 媒体文件总个数
-@property (nonatomic, assign) NSUInteger fileCount;
 /// 目录标签
 @property (weak) IBOutlet NSTextField *directoryLabel;
-// 选择按钮
+/// 选择按钮
 @property (weak) IBOutlet NSButton *chooseButton;
+
+/// 媒体文件总时长(单位:秒)
+@property (nonatomic, assign) CGFloat totalTime;
+/// 媒体文件总个数
+@property (nonatomic, assign) NSUInteger fileCount;
 
 @end
 
@@ -138,8 +139,10 @@
         
         if (result == NSModalResponseOK) {
             
+            // 选择的文件目录
+            NSString *path = panel.URLs.firstObject.path;
             // 显示选择的文件目录
-            self.directoryLabel.stringValue = panel.URLs.firstObject.path;
+            self.directoryLabel.stringValue = path;
             
             // 全局并发队列异步执行(子线程)
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -152,7 +155,7 @@
                 self.fileCount = 0;
                 
                 // 遍历媒体文件并计算时长
-                [self traverse:panel.URLs.firstObject.path];
+                [self traverse:path];
                 
                 // 主线程刷新
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -178,7 +181,6 @@
     
     // 四舍五入
     NSUInteger total = round(duration);
-    
     // 秒
     NSUInteger seconds = total%60;
     // 分
